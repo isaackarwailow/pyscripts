@@ -1,0 +1,1 @@
+- rand_easy_pw.py: This script generates a random, but human readable password. Good for using if you employ a monthly password refresh policy. Can also be used programmatically to change whatever account password you are intending to change.
