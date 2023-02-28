@@ -1,6 +1,7 @@
 import requests
 import random
 import string
+import dropbox
 
 def generate_random_word():
 
@@ -28,4 +29,14 @@ def generate_password():
     password = word1 + word2 + number
     return password
 
-print(generate_password())
+# Set up Dropbox API access
+access_token = ''
+dbx = dropbox.Dropbox(access_token)
+
+data = []
+
+filename = 'example_folder/my_data.txt'
+
+# Upload the data to Dropbox
+with dbx.files_upload(data.encode('utf-8'), filename) as response:
+    print('Uploaded:', response)
